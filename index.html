@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Robot Control System PRO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b1220;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #111a2e;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.time {
+  color: #00ff88;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* MODE */
+.modes {
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  50% { opacity: 0.6; }
+}
+
+.wifi { background: #2ecc71; }
+.bt { background: #3498db; }
+
+/* LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #16213e;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.home { background: #2ecc71; }
+.hospital { background: #e74c3c; }
+.school { background: #3498db; }
+.office { background: #f1c40f; color: black; }
+.stop { background: #ff2d55; color: white; }
+
+/* SENSOR GRID */
+.sensor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sensor {
+  background: #0f1b33;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* PROGRESS BAR */
+.bar {
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: #00ff88;
+  width: 70%;
+  transition: 0.5s;
+}
+
+/* CONSOLE */
+.console {
+  background: black;
+  height: 160px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 12px;
+  color: #00ff88;
+  border-radius: 10px;
+}
+
+/* DOT */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff88;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+/* JOYSTICK */
+.joystick {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-template-rows: 60px 60px 60px;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.js-btn {
+  background: #222c44;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.js-btn:hover {
+  background: #00ff88;
+  color: black;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <span class="title">🚗 Smart Robot Control PRO</span>
+    <span class="time" id="time"></span>
+  </div>
+
+  <div class="modes">
+    <div class="badge wifi">📡 WiFi Active</div>
+    <div class="badge bt">🔵 Bluetooth Ready</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- CONTROL -->
+  <div class="card">
+    <h3>🎮 Control Panel</h3>
+
+    <!-- AUTO ROUTES -->
+    <button class="home" onclick="send('HOME')">🏠 Home</button>
+    <button class="hospital" onclick="send('HOSPITAL')">🏥 Hospital</button>
+    <button class="school" onclick="send('SCHOOL')">🏫 School</button>
+    <button class="office" onclick="send('OFFICE')">🏢 Office</button>
+    <button class="stop" onclick="send('STOP')">⛔ STOP</button>
+
+    <h3>🕹 Manual Joystick</h3>
+
+    <div class="joystick">
+      <div></div>
+      <button class="js-btn" onclick="send('FORWARD')">⬆</button>
+      <div></div>
+
+      <button class="js-btn" onclick="send('LEFT')">⬅</button>
+      <button class="js-btn" onclick="send('STOP')">⛔</button>
+      <button class="js-btn" onclick="send('RIGHT')">➡</button>
+
+      <div></div>
+      <button class="js-btn" onclick="send('BACKWARD')">⬇</button>
+      <div></div>
+    </div>
+
+  </div>
+
+  <!-- STATUS -->
+  <div class="card">
+    <h3>📊 Live Status</h3>
+
+    <p><span class="dot"></span> Robot Connected</p>
+
+    <div class="sensor-grid">
+
+      <div class="sensor">
+        Distance<br>
+        <b id="dist">-- cm</b>
+      </div>
+
+      <div class="sensor">
+        Mode<br>
+        <b id="mode">Idle</b>
+      </div>
+
+      <div class="sensor">
+        Battery<br>
+        <b id="battery">85%</b>
+        <div class="bar"><div class="fill" id="batFill"></div></div>
+      </div>
+
+      <div class="sensor">
+        Motor<br>
+        <b id="motor">Stopped</b>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top:10px;">🖥 Console</h3>
+    <div class="console" id="console"></div>
+
+  </div>
+
+</div>
+
+<script>
+
+const ESP32 = "http://192.168.1.50";
+
+/* REAL TIME CLOCK */
+function updateTime(){
+  let now = new Date();
+  document.getElementById("time").innerText =
+    now.toLocaleDateString() + " | " + now.toLocaleTimeString();
+}
+setInterval(updateTime, 1000);
+updateTime();
+
+/* LOG */
+function log(msg){
+  let c = document.getElementById("console");
+  let time = new Date().toLocaleTimeString();
+  c.innerHTML += `[${time}] > ${msg}<br>`;
+  c.scrollTop = c.scrollHeight;
+}
+
+/* SEND COMMAND */
+function send(cmd){
+  document.getElementById("mode").innerText = cmd;
+  document.getElementById("motor").innerText = "Running";
+
+  log("Command: " + cmd);
+
+  fetch(`${ESP32}/command?cmd=${cmd}`)
+  .then(r => r.text())
+  .then(d => log("ESP32: " + d))
+  .catch(() => log("Connection failed"));
+}
+
+/* SENSOR SIMULATION */
+setInterval(() => {
+
+  let d = Math.floor(Math.random() * 100);
+  document.getElementById("dist").innerText = d + " cm";
+
+  let bat = Math.floor(Math.random() * 100);
+  document.getElementById("battery").innerText = bat + "%";
+  document.getElementById("batFill").style.width = bat + "%";
+
+  if(d < 20){
+    document.getElementById("motor").innerText = "STOP (Obstacle)";
+  }
+
+}, 2000);
+
+/* KEYBOARD CONTROL */
+document.addEventListener("keydown", function(e){
+  if(e.key === "ArrowUp") send("FORWARD");
+  if(e.key === "ArrowDown") send("BACKWARD");
+  if(e.key === "ArrowLeft") send("LEFT");
+  if(e.key === "ArrowRight") send("RIGHT");
+  if(e.key === " ") send("STOP");
+});
+
+</script>
+
+</body>
+</html>
