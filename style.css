@@ -575,3 +575,40 @@ model-viewer{
     background: #111827;
     box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
+
+#code {
+    padding: 40px 20px;
+    background: #111;
+    color: white;
+}
+
+#code h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.code-container {
+    max-height: 600px;
+    width: 50%;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0,255,150,0.2);
+}
+
+.code-container pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.code-container code {
+    color: #00ff99;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.6;
+}
