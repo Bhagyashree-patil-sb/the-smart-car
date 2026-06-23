@@ -1,0 +1,64 @@
+﻿CONTENS
+
+SL. NO	PARTICULARS	PAGE NO
+CHAPTER 1	 PREAMBLE	1
+	1.1 Introduction	1
+	1.2 Overview of Internet of Things (IoT)	2
+	1.3 Problem Definition	2
+	1.4 Motivation	3
+	1.5 Objectives of the Project	3
+	1.6 Scope of the Project	4
+CHAPTER 2	LITERATURE SURVEY	5
+	2.1 Related Works	5
+	2.2 Existing System	6
+	2.3 Proposed System	6
+CHAPTER 3 	SYSTEM REQUIREMENT SPECIFICATION	8
+	3.1 Functional Requirements	8
+	3.2 Non-Functional Requirements	10
+	3.3 Software Requirements	11
+	3.4 Hardware Requirements	12
+CHAPTER 4 	SYSTEM DESIGN AND DEVELOPMENT	14
+	4.1 Introduction	14
+	4.2 Block Diagram	15
+	4.3 Circuit Diagram	16
+	4.4 Working Principle	18
+	4.5 MIT App Design	20
+	4.6 Bluetooth Communication	21
+CHAPTER 5 	IMPLEMENTATION	23
+	5.1 Hardware Implementation	23
+	5.2 Software Implementation	27
+	5.3 ESP32 Source Code	29
+	5.4 MIT App Logic	31
+	5.5 Testing and Calibration	32
+APTER 6 	CHSYSTEM TESTING	34
+	6.1 Test Approach	34
+	6.2 Features Tested	35
+	6.3 Testing Procedure	37
+	6.4 Result Analysis	38
+CHAPTER 7	RESULT INTERPRETATION AND DISCUSSION	39
+	7.1 Project Results	39
+	7.2 Advantages	39
+	7.3 Limitations	40
+	7.4 Future Scope	41
+	CONCLUSION	42
+	REFERENCES	43
+
+
+LIST OF FIGURES
+
+FIG NO.	FIGURE NAME	PAGE NO.
+1.1	Smart Driving Robot	1
+4.2	Block Diagram of Bluetooth-Controlled Smart Navigation Robot	15
+4.3	Circuit Diagram	16
+4.4	Motor Connections	17
+4.5	Working Principle of the System	19
+4.6	MIT App Design Interface	20
+5.1	ESP32 Development Board	24
+5.2	L298N Motor Driver Module	24
+5.3	BO Motors and Wheel Assembly	25
+5.4	Zero PCB Implementation	26
+5.5	ESP32 Logic Flow	30
+5.6	MIT App Logic	32
+6.1	System Testing Setup	35
+
+
