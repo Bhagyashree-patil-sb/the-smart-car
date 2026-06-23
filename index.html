@@ -2,686 +2,422 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Smart Autonomous Robot Car</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
-    <link rel="icon" type="image/png" href="Images/logo.jpeg">
-    
-    <link rel="stylesheet"
-        href="style.css">
 
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div id="popup">
+<div id="popup">
+    <div class="popup-box">
+        <h1>Smart Autonomous Robot Car</h1>
+        <p>ESP32 Bluetooth Controlled Smart Navigation Robot with Obstacle Avoidance and Route System</p>
+        <button id="enterButton">Explore Project</button>
+    </div>
+</div>
 
-        <div class="popup-box">
+<header>
+    <div class="logo">SMART ROBOT CAR</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#components">Components</a>
+        <a href="#working">Working</a>
+        <a href="#code">Code</a>
+        <a href="#download">App</a>
+    </nav>
+</header>
 
-            <h1>
-                Smart Autonomous Robot Car
-            </h1>
+<section class="hero">
+    <div class="hero-content">
+        <h1>SMART MULTI CONTROL ROBOTIC CAR</h1>
+        <p>ESP32 based intelligent robot with Bluetooth control, obstacle avoidance and navigation system.</p>
+        <a href="#about" class="hero-button">View Project</a>
+    </div>
+</section>
 
+<section id="about">
+    <h2>About The Project</h2>
+
+    <div class="about-container">
+        <div class="about-text">
             <p>
-                Bluetooth Controlled Autonomous Vehicle Using Arduino UNO
+                The Smart Navigation Robot is built using ESP32, L298N motor driver, BO motors, ultrasonic sensor,
+                and servo motor. It supports Bluetooth control through a mobile application.
             </p>
 
-            <button id="enterButton">
-                Explore Project
-            </button>
+            <p>
+                It can operate in manual mode, auto obstacle avoidance mode, and predefined route navigation modes
+                like Home, School, Office, and Hospital.
+            </p>
+        </div>
 
+        <div class="about-image-box">
+            <img src="https://cdn.pixabay.com/photo/2016/10/09/08/32/robot-1723996_1280.jpg">
+        </div>
+    </div>
+</section>
+
+<section id="team">
+    <h2>Team Members</h2>
+
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="team-mates/Bhagyashree-SG23CSD007.JPEG" alt="Bhagyashree portrait facing camera smiling; head-and-shoulders photo on a plain background; team ID SG23CSD007 visible">
+            <h3>Bhagyashree</h3>
+            <span>SG23CSD007</span>
+        </div>
+
+        <div class="team-card">
+            <img src="team-mates/Chetana-SG23CSD011.JPEG" alt="Chetana portrait facing camera smiling; head-and-shoulders photo on a plain background; team ID SG23CSD011 visible">
+            <h3>Chetana</h3>
+            <span>SG23CSD011</span>
+        </div>
+
+        <div class="team-card">
+            <img src="team-mates/HIVANGOUDA-SG23CSD040.JPEG" alt="Shivangouda portrait facing camera smiling; head-and-shoulders photo on a plain background; team ID SG23CSD040 visible">
+            <h3>Shivangouda</h3>
+            <span>SG23CSD040</span>
+        </div>
+
+        <div class="team-card">
+            <img src="team-mates/Supriya-SG23CSD049.JPEG" alt="Supriya portrait facing camera smiling; head-and-shoulders photo on a plain background; team ID SG23CSD049 visible">
+            <h3>Supriya</h3>
+            <span>SG23CSD049</span>
         </div>
 
     </div>
+</section>
 
-    <header>
-
-        <div class="logo">
-            SMART ROBOT CAR
-        </div>
-
-        <nav>
-
-            <a href="#about">About</a>
-
-            <a href="#team">Team</a>
-
-            <a href="#components">Components</a>
-
-            <a href="#working">Working</a>
-
-            <a href="#code">Code</a>
-
-            <a href="#download">App</a>
-
-        </nav>
-
-    </header>
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <h1>
-                SMART MULTI CONTROL ROBOTIC CAR
-            </h1>
-
-            <p>
-                An intelligent Bluetooth controlled robotic car
-                with autonomous obstacle detection and navigation.
-            </p>
-
-            <a href="#about"
-                class="hero-button">
-
-                View Project
-
-            </a>
-
-        </div>
-
-    </section>
-
-    <section id="about">
-
-        <h2>
-            About The Project
-        </h2>
-
-        <div class="about-container">
-
-            <div class="about-text">
-
-                <p>
-                    This project is a Bluetooth Controlled Autonomous Smart Robot Car
-                    developed using Arduino UNO, ultrasonic sensors, servo motors,
-                    and MIT App Inventor.
-                </p>
-
-                <p>
-                    The robot supports both manual and autonomous driving modes.
-                    Users can control the vehicle wirelessly using a mobile application.
-                    The ultrasonic sensor continuously detects obstacles while the
-                    servo motor scans safe directions for navigation.
-                </p>
-
-            </div>
-
-            <div class="about-image-box">
-
-                <img src="Images/circuit-diagram.png"
-                    alt="Circuit Diagram">
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="team">
-
-        <h2>
-            Team Members
-        </h2>
-
-        <div class="team-container">
-
-            <div class="team-card">
-
-                <img src="team-mates/Bhagyashree-SG23CSD007.JPEG">
-
-                <h3>
-                    Bhagyashree
-                </h3>
-
-                <span>
-                    SG23CSD007
-                </span>
-
-            </div>
-
-            <div class="team-card">
-
-                <img src="team-mates/Chetana-SG23CSD011.JPEG">
-
-                <h3>
-                    Chetana
-                </h3>
-
-                <span>
-                    SG23CSD011
-                </span>
-
-            </div>
-
-            <div class="team-card">
-
-                <img src="team-mates/SHIVANGOUDA-SG23CSD040.JPEG">
-
-                <h3>
-                    Shivangouda
-                </h3>
-
-                <span>
-                    SG23CSD040
-                </span>
-
-            </div>
-
-            <div class="team-card">
-
-                <img src="team-mates/Supriya-SG23CSD049.JPEG">
-
-                <h3>
-                    Supriya
-                </h3>
-
-                <span>
-                    SG23CSD049
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="components">
-
-        <h2>
-            Components Used
-        </h2>
-
-        <div class="components-container">
-
-            <div class="component-card">
-
-                <img src="Images/arduino uno.jpeg">
-
-                <p>
-                    Arduino UNO
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/bluetooth-module-hc05.jpg">
-
-                <p>
-                    HC-05 Bluetooth Module
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/ultrasonic sensor.jpeg">
-
-                <p>
-                    Ultrasonic Sensor
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/Servo-motor.webp">
-
-                <p>
-                    Servo Motor
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/l293n-driver.webp">
-
-                <p>
-                    L293N Driver
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/battery.jpeg">
-
-                <p>
-                    Battery
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/jumper-wire.jpg">
-
-                <p>
-                    Jumper Wire
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/screw-bolt.webp">
-
-                <p>
-                    Screw Bolts
-                </p>
-
-            </div>
-
-            <div class="component-card">
-
-                <img src="Images/ultrasoic-holder.jpg">
-
-                <p>
-                    Ultrasonic Holder
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="cad">
-
-    <h2>CAD Design (3D Model)</h2>
+<section id="cad">
+    <h2>3D Printed Model (360° View)</h2>
 
     <div class="cad-container">
 
         <model-viewer 
-            src="Cad Files/body.glb"
-            alt="Smart Robot Car 3D Model"
+            src="Cad Files/holder.glb"
+            alt="Sensor Holder"
             auto-rotate
+            rotation-per-second="30deg"
             camera-controls
+            touch-action="pan-y"
             shadow-intensity="1"
             exposure="1"
-            ar>
+            ar
+            style="width:100%; height:400px;">
         </model-viewer>
 
-         <model-viewer 
-            src="Cad Files/holder.glb"
-            alt="Smart Robot Car 3D Model"
+        <model-viewer 
+            src="Cad Files/body.glb"
+            alt="3D Printed Robot Chassis"
             auto-rotate
+            rotation-per-second="25deg"
             camera-controls
+            touch-action="pan-y"
             shadow-intensity="1"
             exposure="1"
-            ar>
+            ar
+            style="width:100%; height:500px;">
         </model-viewer>
 
     </div>
-
 </section>
 
-    <section id="working">
+<section id="components">
+    <h2>Components Used</h2>
 
-        <h2>
-            Working of the Project
-        </h2>
+    <div class="components-container">
 
-        <div class="working-container">
-
-            <div class="step">
-                1. User sends commands through MIT App.
-            </div>
-
-            <div class="step">
-                2. Bluetooth module receives commands.
-            </div>
-
-            <div class="step">
-                3. Arduino UNO processes the instructions.
-            </div>
-
-            <div class="step">
-                4. Motor driver controls movement.
-            </div>
-
-            <div class="step">
-                5. Ultrasonic sensor detects obstacles.
-            </div>
-
-            <div class="step">
-                6. Servo motor scans safe directions.
-            </div>
-
-            <div class="step">
-                7. Robot automatically selects safest path.
-            </div>
-
+        <div class="component-card">
+            <img src="Images/esp32.png">
+            <p>ESP32 Board</p>
         </div>
 
-    </section>
+        <div class="component-card">
+            <img src="Images/l293n-driver.webp">
+            <p>L298N Motor Driver</p>
+        </div>
 
-    <section id="video">
-    <h2>Working Video</h2>
+        <div class="component-card">
+            <img src="Images/battery.jpg">
+            <p>Battery Pack</p>
+        </div>
 
-    <div class="video-container">
-        <video controls>
-            <source src="videos/robot-working.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="component-card">
+            <img src="Images/jumper-wire.jpg">
+            <p>Jumper Wires</p>
+        </div>
+
+
+        <div class="component-card">
+            <img src="Images/dc.png">
+            <p>DC Gear Motors</p>
+        </div>
+
     </div>
-
 </section>
 
-   <section id="code">
+<section id="working">
+    <h2>Working of the Project</h2>
 
-    <h2>Arduino Robot Source Code</h2>
+    <div class="working-container">
+        <div class="step">1. User sends command via mobile app.</div>
+        <div class="step">2. ESP32 receives Bluetooth signal.</div>
+        <div class="step">3. Motor driver controls wheels.</div>
+        <div class="step">4. Ultrasonic sensor detects obstacles.</div>
+        <div class="step">5. Servo scans left and right.</div>
+        <div class="step">6. System selects safe path.</div>
+        <div class="step">7. Robot moves accordingly.</div>
+    </div>
+</section>
 
-   
+<section id="code">
+    <h2>Arduino / ESP32 Source Code</h2>
 
     <div class="code-container">
-<pre><code class="language-cpp">
-#include <SoftwareSerial.h>
-#include <Servo.h>
+        <pre><code class="language-cpp">
+#include &lt;BluetoothSerial.h&gt;
+#include &lt;ESP32Servo.h&gt;
 
-SoftwareSerial bluetooth(10, 11);
+BluetoothSerial SerialBT;
 Servo scanner;
 
-const int motorLeft1 = 2;
-const int motorLeft2 = 3;
-const int motorRight1 = 4;
-const int motorRight2 = 5;
+#define ENA 14
+#define IN1 27
+#define IN2 26
 
-const int speedA = 6;
-const int speedB = 9;
+#define ENB 12
+#define IN3 25
+#define IN4 33
 
-const int trigPin = 7;
-const int echoPin = 8;
+#define TRIG 5
+#define ECHO 18
 
-const int servoPin = 12;
+#define SERVO_PIN 13
 
-volatile long leftCount = 0;
-volatile long rightCount = 0;
+#define CH_A 0
+#define CH_B 1
 
-char cmd;
-int speedValue = 180;
-bool autoModeEnabled = false;
+char author[] = {83,117,114,101,115,104,32,83,104,101,114,105,107,97,114,0};
 
-long duration;
-int distanceValue;
+int motorSpeed = 180;
 
-const float wheelCircumference = 21.0;
-const int pulsesPerRevolution = 20;
+bool autoMode = false;
+bool routeMode = false;
+bool routeRunning = false;
+int routeID = 0;
 
-char authorName[] = {83,117,114,101,115,104,32,83,104,101,114,105,107,97,114,0};
+unsigned long lastCmdTime = 0;
 
-void leftEncoderISR()
-{
-  leftCount++;
+void setSpeed(int s) {
+  motorSpeed = constrain(s, 0, 255);
+  ledcWrite(CH_A, motorSpeed);
+  ledcWrite(CH_B, motorSpeed);
 }
 
-void rightEncoderISR()
-{
-  rightCount++;
+void stopCar() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
 }
 
-long cmToPulses(float cm)
-{
-  return (cm / wheelCircumference) * pulsesPerRevolution;
+void forward() {
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
 }
 
-void moveForwardDistance(float cm)
-{
-  leftCount = 0;
-  rightCount = 0;
-  long target = cmToPulses(cm);
-  digitalWrite(motorLeft1, HIGH);
-  digitalWrite(motorLeft2, LOW);
-  digitalWrite(motorRight1, HIGH);
-  digitalWrite(motorRight2, LOW);
-  while (leftCount < target && rightCount < target) {}
-  stopRobot();
+void backward() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
 }
 
-void moveBackwardDistance(float cm)
-{
-  leftCount = 0;
-  rightCount = 0;
-  long target = cmToPulses(cm);
-  digitalWrite(motorLeft1, LOW);
-  digitalWrite(motorLeft2, HIGH);
-  digitalWrite(motorRight1, LOW);
-  digitalWrite(motorRight2, HIGH);
-  while (leftCount < target && rightCount < target) {}
-  stopRobot();
+void left() {
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
 }
 
-void turnLeftDistance(int pulses)
-{
-  leftCount = 0;
-  rightCount = 0;
-  digitalWrite(motorLeft1, LOW);
-  digitalWrite(motorLeft2, HIGH);
-  digitalWrite(motorRight1, HIGH);
-  digitalWrite(motorRight2, LOW);
-  while (rightCount < pulses) {}
-  stopRobot();
+void right() {
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
 }
 
-void turnRightDistance(int pulses)
-{
-  leftCount = 0;
-  rightCount = 0;
-  digitalWrite(motorLeft1, HIGH);
-  digitalWrite(motorLeft2, LOW);
-  digitalWrite(motorRight1, LOW);
-  digitalWrite(motorRight2, HIGH);
-  while (leftCount < pulses) {}
-  stopRobot();
-}
-
-void setup()
-{
-  pinMode(motorLeft1, OUTPUT);
-  pinMode(motorLeft2, OUTPUT);
-  pinMode(motorRight1, OUTPUT);
-  pinMode(motorRight2, OUTPUT);
-
-  pinMode(speedA, OUTPUT);
-  pinMode(speedB, OUTPUT);
-
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-
-  attachInterrupt(digitalPinToInterrupt(2), leftEncoderISR, RISING);
-  attachInterrupt(digitalPinToInterrupt(3), rightEncoderISR, RISING);
-
-  Serial.begin(9600);
-  bluetooth.begin(9600);
-
-  scanner.attach(servoPin);
-  scanner.write(90);
-
-  stopRobot();
-
-  Serial.println("Robot is starting...");
-  Serial.print("Author: ");
-  Serial.println(authorName);
-}
-
-void loop()
-{
-  if (bluetooth.available())
-  {
-    cmd = bluetooth.read();
-    processCommand(cmd);
-  }
-
-  analogWrite(speedA, speedValue);
-  analogWrite(speedB, speedValue);
-
-  if (autoModeEnabled)
-  {
-    autoNavigation();
-  }
-}
-
-void processCommand(char command)
-{
-  switch (command)
-  {
-    case 'F': autoModeEnabled = false; moveForwardDistance(20); break;
-    case 'B': autoModeEnabled = false; moveBackwardDistance(20); break;
-    case 'L': autoModeEnabled = false; turnLeftDistance(15); break;
-    case 'R': autoModeEnabled = false; turnRightDistance(15); break;
-    case 'S': autoModeEnabled = false; stopRobot(); break;
-    case 'A': autoModeEnabled = true; break;
-    case '1': autoModeEnabled = false; runSchoolRoute(); break;
-    case '2': autoModeEnabled = false; runHomeRoute(); break;
-    case '3': autoModeEnabled = false; runOfficeRoute(); break;
-    case '4': autoModeEnabled = false; runHospitalRoute(); break;
-  }
-}
-
-int getDistance()
-{
-  digitalWrite(trigPin, LOW);
+long getDistance() {
+  digitalWrite(TRIG, LOW);
   delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
+  digitalWrite(TRIG, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  duration = pulseIn(echoPin, HIGH, 20000);
+  digitalWrite(TRIG, LOW);
+
+  long duration = pulseIn(ECHO, HIGH, 30000);
   if (duration == 0) return 999;
+
   return duration * 0.034 / 2;
 }
 
-void autoNavigation()
-{
-  distanceValue = getDistance();
-  if (distanceValue > 20)
-  {
-    moveForwardDistance(10);
+void autoDrive() {
+  scanner.write(90);
+  delay(200);
+
+  long front = getDistance();
+
+  if (front > 25) {
+    forward();
     return;
   }
-  stopRobot();
-  moveBackwardDistance(10);
+
+  stopCar();
+  delay(200);
+
   scanner.write(150);
   delay(300);
-  int leftSide = getDistance();
+  long leftD = getDistance();
+
   scanner.write(30);
   delay(300);
-  int rightSide = getDistance();
+  long rightD = getDistance();
+
   scanner.write(90);
-  if (leftSide > rightSide)
-  {
-    turnLeftDistance(15);
+
+  if (leftD > rightD) {
+    left();
+  } else {
+    right();
   }
-  else
-  {
-    turnRightDistance(15);
+
+  delay(400);
+  stopCar();
+}
+
+void routeHome() {
+  forward(); delay(5000); stopCar();
+  right(); delay(700); stopCar();
+  forward(); delay(3000); stopCar();
+}
+
+void routeSchool() {
+  forward(); delay(3000); stopCar();
+  left(); delay(600); stopCar();
+  forward(); delay(2000); stopCar();
+}
+
+void routeOffice() {
+  right(); delay(800); stopCar();
+  forward(); delay(2500); stopCar();
+  left(); delay(500); stopCar();
+  forward(); delay(2000); stopCar();
+}
+
+void routeHospital() {
+  forward(); delay(2000); stopCar();
+  left(); delay(700); stopCar();
+  forward(); delay(4000); stopCar();
+  right(); delay(600); stopCar();
+  forward(); delay(1000); stopCar();
+}
+
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("ESP32_CAR");
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+
+  scanner.attach(SERVO_PIN);
+  scanner.write(90);
+
+  ledcSetup(CH_A, 5000, 8);
+  ledcAttachPin(ENA, CH_A);
+
+  ledcSetup(CH_B, 5000, 8);
+  ledcAttachPin(ENB, CH_B);
+
+  setSpeed(motorSpeed);
+}
+
+void loop() {
+  if (SerialBT.available()) {
+    char cmd = SerialBT.read();
+
+    autoMode = false;
+    routeMode = false;
+    routeRunning = false;
+
+    if (cmd == 'A') autoMode = true;
+    if (cmd == '1') { routeMode = true; routeID = 1; }
+    if (cmd == '2') { routeMode = true; routeID = 2; }
+    if (cmd == '3') { routeMode = true; routeID = 3; }
+    if (cmd == '4') { routeMode = true; routeID = 4; }
+
+    if (!autoMode && !routeMode) {
+      if (cmd == 'F') forward();
+      if (cmd == 'B') backward();
+      if (cmd == 'L') left();
+      if (cmd == 'R') right();
+      if (cmd == 'S') stopCar();
+    }
+  }
+
+  if (autoMode) autoDrive();
+
+  if (routeMode && !routeRunning) {
+    routeRunning = true;
+
+    if (routeID == 1) routeHome();
+    if (routeID == 2) routeSchool();
+    if (routeID == 3) routeOffice();
+    if (routeID == 4) routeHospital();
+
+    routeRunning = false;
+    routeMode = false;
   }
 }
-
-void runSchoolRoute()
-{
-  moveForwardDistance(100);
-  moveForwardDistance(100);
-  moveForwardDistance(100);
-}
-
-void runHomeRoute()
-{
-  moveForwardDistance(100);
-  turnLeftDistance(15);
-  moveForwardDistance(80);
-  turnRightDistance(15);
-  moveForwardDistance(100);
-}
-
-void runOfficeRoute()
-{
-  moveForwardDistance(120);
-  turnLeftDistance(15);
-  moveForwardDistance(80);
-  turnRightDistance(15);
-  moveForwardDistance(90);
-  turnLeftDistance(15);
-}
-
-void runHospitalRoute()
-{
-  moveForwardDistance(100);
-  turnLeftDistance(15);
-  moveForwardDistance(100);
-  turnRightDistance(15);
-  moveForwardDistance(100);
-}
-
-void stopRobot()
-{
-  digitalWrite(motorLeft1, LOW);
-  digitalWrite(motorLeft2, LOW);
-  digitalWrite(motorRight1, LOW);
-  digitalWrite(motorRight2, LOW);
-  analogWrite(speedA, 0);
-  analogWrite(speedB, 0);
-}
-</code></pre>
+        </code></pre>
     </div>
-
-</section>
-</code></pre>
-    </div>
-
 </section>
 
-    <section id="download">
+<section id="download">
+    <h2>Download App</h2>
 
-        <h2>
-            Download Controller App
-        </h2>
+    <p>Control robot using Bluetooth mobile application.</p>
 
-        <p>
-            Android application for controlling the robot vehicle.
-        </p>
+    <a href="app/Smart_Car (2).apk" class="download-button" download>
+        Download App
+    </a>
+</section>
 
-        <a href="app/SmartRobotController.apk"
-            class="download-button"
-            download>
+<footer>
+    <p>SMART MULTI CONTROL ROBOTIC CAR © 2026</p>
+</footer>
 
-            Download App
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
 
-        </a>
-
-    </section>
-
-    <footer>
-
-        <p>
-            SMART MULTI CONTROL ROBOTIC CAR Project © 2026
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
-
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
 </body>
-
 </html>
