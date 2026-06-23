@@ -1,0 +1,19 @@
+Bluetooth Connect:
+BeforePicking -> AddressesAndNames
+AfterPicking -> Connect
+
+Manual -> SendText M
+Auto -> SendText A
+
+Home -> 1
+School -> 2
+Office -> 3
+Hospital -> 4
+
+Forward -> F
+Backward -> B
+Left -> L
+Right -> R
+Stop -> S
+
+Speed Slider -> Send 0-9
